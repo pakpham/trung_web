@@ -1,0 +1,32 @@
+<root>
+    <params name="WooCommerce" label="Filter">
+        <param name="categories" label="Category" type="woocommercecategories" default="0" multiple="1"
+               size="10"/>
+        <param name="tags" label="Tag" type="woocommercetags" default="0" multiple="1" size="10"/>
+        <param type="group" label="Limit">
+            <param name="featured" label="Featured" type="filter" default="0"/>
+            <param name="instock" label="In stock" type="filter" default="1"/>
+            <param name="downloadable" label="Downloadable" type="filter" default="0"/>
+            <param name="virtual" label="Virtual" type="filter" default="0"/>
+        </param>
+        <param name="textvars" label="Create text variables (one per line)" type="textarea" default="variable||equalvalue||true||false&#xA;_stock_status||instock||In stock||Out of stock&#xA;_downloadable||yes||Downloadable||Not Downloadable&#xA;_virtual||yes||Virtual||Not Virtual" style2="width:300px;height: 200px;" tip="variable||equalvalue||true||false: if 'variable' equals to 'equalvalue', then you will get the text 'true', but if it's not equal, the text will be 'false'. The new variable's name will be textvariable (the 'variable' replaced by your variable's name)."/>
+    </params>
+    <params name="order" label="Order by">
+        <param name="categoryorder" type="mixed" label="Order" default="creation_date|*|desc">
+            <param type="list" label="Field" translateable="1">
+                <option value="post_date">Creation date</option>
+                <option value="post_modified">Modification date</option>
+                <option value="_total_sales">Total sales</option>
+                <option value="_regular_price">Regular price</option>
+                <option value="_sale_price">Sale price</option>
+                <option value="_price">Price</option>
+                <option value="ID">ID</option>
+                <option value="title">Title</option>
+            </param>
+            <param type="radio" label="order" translateable="1">
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+            </param>
+        </param>
+    </params>
+</root>
